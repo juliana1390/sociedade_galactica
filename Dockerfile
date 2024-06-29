@@ -1,4 +1,4 @@
-FROM python:3.11.9-alpine3.20
+FROM python:3.10-alpine3.20
 LABEL maintainer='juliana13290@gmail.com'
 
 ENV PYTHONDONTWRITEBYTECODE 1
@@ -22,7 +22,7 @@ RUN python3 -m venv /venv \
     && chown -R duser:duser /data/web/media \
     && chmod -R 755 /data/web/static \
     && chmod -R 755 /data/web/media \
-    && chmod +x /scripts/*
+    && chmod -R +x /scripts
 
 ENV PATH="/scripts:/venv/bin:$PATH"
 
