@@ -1,6 +1,6 @@
 # sociedade_galactica
 
-Esta é a segunda versão do projeto de Laboratório de Bases de Dados, utilizando: framework Django, PostreSQL e Docker.
+Esta é a segunda versão do projeto de Laboratório de Bases de Dados, utilizando: framework Django, PostgreSQL e Docker.
 
 A Primeira versão foi realizada com SGBD Oracle e Django.
 
