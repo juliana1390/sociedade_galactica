@@ -1,4 +1,4 @@
-### sociedade_galactica
+# sociedade_galactica
 
 Esta é a segunda versão do projeto de Laboratório de Bases de Dados, utilizando: framework Django, PostreSQL e Docker.
 
@@ -17,7 +17,7 @@ The first version was implemented with Oracle DBMS and Django.
 
 ## Detalhes do projeto
 
-# Descrição base de dados
+### Descrição base de dados
 
 **Estrelas** são corpos celestes identificados pela sua designação de catálogo estelar, além de conter informações como nome, classificação estelar, e massa. Além disso, estrelas possuem coordenadas celestes, que também podem ser utilizadas para referenciar estrelas de forma única. Estrelas dão origem a **Sistemas**, onde cada um é identificado pela sua estrela principal, podendo também ter um nome associado. **Planetas** compõem outra classificação de corpos celestes, usualmente orbitando estrelas, sendo identificados pelas suas respectivas designações astronômicas, além de conter informações como massa, raio, composição atmosférica, e classificação planetária. Tanto planetas quanto estrelas podem orbitar alguma estrela, onde são armazenadas informações sobre a órbita, tais como distância mínima e máxima de entre os dois corpos, e o período de translação. Toda estrela deve obrigatoriamente compor um sistema ou orbitar direta/indiretamente uma estrela que compõe um sistema. Podem existir planetas errantes, i.e., que não orbitam estrelas, e planetas que orbitam mais de uma estrela, i.e., em sistemas múltiplos.
 
