@@ -13,8 +13,6 @@ This is the second version of the Database Laboratory project, using Django fram
 The first version was implemented with Oracle DBMS and Django.
 
 
---------------------------------------
-
 ## Detalhes do projeto
 
 ### Descrição base de dados
