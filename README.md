@@ -31,4 +31,4 @@ Entre as diversas nações existentes, podem existir **Líderes**, membros influ
 
 --------------------------------------
 
-![Imagem Modelo Relacional](https://github.com/juliana1390/sociedade_galactica/djangoapp/app/templates/app/relacional.png)
+<img src="djangoapp/app/templates/app/relacional.png">
