@@ -5,9 +5,6 @@ Esta é a segunda versão do projeto de Laboratório de Bases de Dados, utilizan
 A Primeira versão foi realizada com SGBD Oracle e Django.
 
 
---------------------------------------
-
-
 This is the second version of the Database Laboratory project, using Django framework, PostgreSQL, and Docker.
 
 The first version was implemented with Oracle DBMS and Django.
@@ -31,5 +28,6 @@ Na galáxia, existem ainda **Facções**, que são grupos ideológicos que podem
   
 Entre as diversas nações existentes, podem existir **Líderes**, membros influentes das nações que desempenham papéis-chave para o seu desenvolvimento. Líderes são identificados pelos seus respectivos Cadastros de Pessoa Intergalática (CPIs), além de terem informações armazenadas como nome, cargo, nação, facção, e espécie. Um Líder cadastrado no sistema sempre deve estar associado a uma nação. Os cargos de líderes representam de maneira geral seus papéis em suas respectivas nações, podendo ser: comandante, oficial ou cientista. Cada facção deve ter um único líder para comandá-la, este sendo associado a uma nação onde a facção está presente, e um líder pode participar de apenas de uma facção.
 
+--------------------------------------
 
 ![Imagem Modelo Relacional](https://github.com/juliana1390/sociedade_galactica/djangoapp/app/templates/app/relacional.png)
