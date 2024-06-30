@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sociedade Galáctica</title>
+    <title>Sociedade Galactica</title>
 </head>
 <body>
     <h1>Sociedade Galáctica</h1>
+    <form method="post" action="{% url 'app:login' %}">
+        {% csrf_token %}
+        <button>LOGIN</button>
+    </form>    
 </body>
 </html>
