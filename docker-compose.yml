@@ -21,6 +21,6 @@ services:
     container_name: psql
     image: postgres:14.12-alpine
     volumes:
-      - ./data/postgres/data:/var/lib/postgresql/data
+      - ./data/postgres/data:/var/lib/postgresql/14/main
     env_file:
       - ./dotenv_files/.env
