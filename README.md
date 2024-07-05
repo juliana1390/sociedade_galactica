@@ -7,11 +7,11 @@ A Primeira versão foi realizada com SGBD Oracle e Django.
 This is the second version of the Database Laboratory project, using Django framework, PostgreSQL, and Docker.
 The first version was implemented with Oracle DBMS and Django.
 
-Django 5.0.6
+- Django 5.0.6
 
-psql (PostgreSQL) 14.12 (Ubuntu 14.12-0ubuntu0.22.04.1)
+- psql (PostgreSQL) 14.12 (Ubuntu 14.12-0ubuntu0.22.04.1)
 
-Docker version 27.0.3, build 7d4bcd8
+- Docker version 27.0.3, build 7d4bcd8
 
 <div style="align-items: center;">
   <a href="https://www.djangoproject.com/" target="_blank"><img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=green" target="_blank"></a> 
