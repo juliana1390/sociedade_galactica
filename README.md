@@ -8,7 +8,9 @@ This is the second version of the Database Laboratory project, using Django fram
 The first version was implemented with Oracle DBMS and Django.
 
 Django 5.0.6
+
 psql (PostgreSQL) 14.12 (Ubuntu 14.12-0ubuntu0.22.04.1)
+
 Docker version 27.0.3, build 7d4bcd8
 
 <div style="align-items: center;">
