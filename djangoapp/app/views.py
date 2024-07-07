@@ -20,7 +20,7 @@ def login(request):
 def login_check(request):
     cpi = request.POST.get('cpi')
     password = request.POST.get('password')
-    # print(cpi)
+    print(cpi)
     # print(password)
 
     # print('antes do try')
