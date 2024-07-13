@@ -21,6 +21,6 @@ services:
     container_name: psql
     image: postgres:14.12-bookworm
     volumes:
-      - ./data/postgresql/data:/var/lib/postgresql/14/main
+      - ./data/postgresql/data:/var/lib/postgresql/data
     env_file:
       - ./dotenv_files/.env
