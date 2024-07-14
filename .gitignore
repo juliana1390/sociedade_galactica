@@ -2,7 +2,8 @@
 /djangoapp/media/
 gunicorn-error-log
 __localcode
-/data/
+/database/
+/django/
 
 # Django #
 *.log

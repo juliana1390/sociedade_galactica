@@ -8,8 +8,8 @@ ENV PYTHONUNBUFFERED 1
 RUN apt-get update && apt-get install -y netcat-openbsd
 
 # Copy folders into the container
-COPY ./djangoapp /djangoapp
-COPY ./scripts /scripts
+COPY djangoapp /djangoapp
+COPY scripts /scripts
 
 # Set working directory
 WORKDIR /djangoapp
@@ -22,13 +22,7 @@ RUN python3 -m venv /venv && \
     /venv/bin/pip install --upgrade pip && \
     /venv/bin/pip install -r /djangoapp/requirements.txt && \
     adduser --disabled-password --no-create-home duser && \
-    mkdir -p /data/web/static && \
-    mkdir -p /data/web/media && \
     chown -R duser:duser /venv && \
-    chown -R duser:duser /data/web/static && \
-    chown -R duser:duser /data/web/media && \
-    chmod -R 755 /data/web/static && \
-    chmod -R 755 /data/web/media && \
     chmod -R +x /scripts
 
 # Add scripts and venv/bin to $PATH

@@ -1,17 +1,13 @@
-# version: '4'
-
 services:
   djangoapp:
     container_name: djangoapp
     build:
       context: .
-      # dockerfile: ./Dockerfile
+      dockerfile: ./Dockerfile
     ports:
       - 8000:8000
     volumes:
       - ./djangoapp:/djangoapp
-      - ./data/web/static:/data/web/static/
-      - ./data/web/media:/data/web/media/
     env_file:
       - ./dotenv_files/.env
     depends_on:
@@ -20,7 +16,9 @@ services:
   psql:
     container_name: psql
     image: postgres:14.12-bookworm
+    ports:
+      - 5432:5432
     volumes:
-      - ./data/postgresql/data:/var/lib/postgresql/data
+      - ./database:/var/lib/postgresql/data
     env_file:
       - ./dotenv_files/.env
