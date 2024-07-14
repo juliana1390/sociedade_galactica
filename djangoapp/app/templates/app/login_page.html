@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -6,36 +7,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'app/login.css' %}">
 </head>
 
 <body>
-    <div class="page" style="text-align: center; font-size: xx-large;">
+    <div class="page">
         <form method="post" class="formLogin" action="{% url 'app:login_check' %}">
             {% csrf_token %}
-            <h1>Sociedade Galáctica</h1>
+            <!-- <h1>Sociedade Galáctica</h1> -->
             <h1>Login</h1>
             <hr>
             <p>Digite os seus dados de acesso no campo abaixo.</p>
 
             <!-- Exibir mensagens de erro se houver -->
             {% if error_message %}
-            <p style="color: red;">{{ error_message }}</p>
+            <p class="error">{{ error_message }}</p>
             {% endif %}
 
             <div>
-                <label for="cpi">CPI</label>
-                <input type="text" name="cpi" placeholder="Digite seu CPI" autofocus="true" style="font-size: large;" />
+                <!-- <label for="cpi">CPI</label> -->
+                <input type="text" name="cpi" placeholder="Digite seu CPI" autofocus="true" class="input-large" />
             </div>
             <br>
             <div>
-                <label for="password">Senha</label>
-                <input type="password" name="password" placeholder="Digite sua senha" style="font-size: large;" />
+                <!-- <label for="password">Senha</label> -->
+                <input type="password" name="password" placeholder="Digite sua senha" class="input-large" />
                 <br>
-                <a href="/" style="font-size: medium;">Esqueci minha senha</a>
+                <a href="/" class="forgot-password">Esqueci minha senha</a>
             </div>
             <br>
             <div>
-                <input type="submit" value="ACESSAR" class="btn" style="font-size: large;" />
+                <input type="submit" value="ACESSAR" class="btn" />
             </div>
         </form>
     </div>

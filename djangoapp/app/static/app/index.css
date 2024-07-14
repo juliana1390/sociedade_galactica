@@ -1,0 +1,33 @@
+body {
+    background-color: #000000;
+    background-image: url("earth.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 90vh;
+    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    font-size: 80px;
+    color: yellow;
+    opacity: 50%;
+}
+
+form {
+    margin-top: 20px;
+}
+
+button {
+    padding: 20px 50px;
+    font-size: 30px;
+    cursor: pointer;
+    border-radius: 10px;
+    border-color: yellow;
+    color: yellow;
+    background-color: #222222;
+    opacity: 60%;
+}
+
