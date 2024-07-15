@@ -1,5 +1,3 @@
-/djangoapp/app/static/
-/djangoapp/app/templates/
 gunicorn-error-log
 __localcode
 /database/
@@ -11,7 +9,8 @@ __localcode
 *.pyc
 __pycache__
 db.sqlite3
-media
+/media
+/staticfiles
 
 # Backup files # 
 *.bak 

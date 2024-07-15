@@ -1,0 +1,131 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    font-size: medium;
+    background-color: #222222;
+    color: yellow;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: yellow;
+}
+
+.container {
+    background-image: url("sci-fi.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat:no-repeat;
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    padding: 20px;
+    border: 2px solid yellow;
+    border-radius: 8px;
+    background-color: #333333;
+}
+
+.column {
+    flex: 1;
+    margin: 10px;
+}
+
+fieldset {
+    border: 2px solid yellow;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #222222;
+    opacity: 75%;
+}
+
+legend {
+    font-size: x-large;
+    font-weight: bold;
+    color: yellow;
+}
+
+h3 {
+    font-size: 1.5em;
+    color: yellow;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1em;
+}
+
+.inline-inputs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.inline-inputs div {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.inline-inputs div:last-child {
+    margin-right: 0;
+}
+
+input[type="text"] {
+    font-size: 1em;
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    background-color: #333333;
+    border: 1px solid yellow;
+    border-radius: 10px;
+    color: yellow;
+}
+
+button {
+    font-size: medium;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 1px solid yellow;
+    border-radius: 10px;
+    background-color: #333333;
+    color: yellow;
+}
+
+button:hover {
+    background-color: yellow;
+    color: #222222;
+}
+
+button.report-button {
+    font-size: medium;
+    color: yellow;
+    font-weight: bold;
+    background-color: #222222;
+    border: 1px solid yellow;
+}
+
+button.report-button:hover {
+    background-color: yellow;
+    color: #f0ad4e;
+}
+
+.read_placeholder {
+    flex:auto;
+    margin-right: 10px;
+}
+
+.delete_placeholder {
+    flex:auto;
+    margin-right: 10px;
+}
