@@ -1,0 +1,123 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gerenciamento - Comandante</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'app/comandante.css' %}">
+</head>
+
+<body>
+    <h1>Sistema de Gerenciamento</h1>
+    <div class="container">
+        <div class="column">
+            <fieldset>
+                <legend>Funcionalidades - Comandante</legend>
+
+                <!-- Inserir Nação -->
+                <h3>Incluir Nação</h3>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="form-group inline-inputs">
+                        <div>
+                            <label for="id_nacao">Nome da Nação:</label>
+                            <input type="text" id="id_nacao" name="nacao" required>
+                        </div>
+                        <div>
+                            <label for="id_federacao">Nome da Federação:</label>
+                            <input type="text" id="id_federacao" name="federacao" required>
+                        </div>
+                    </div>
+                    <button type="submit">INCLUIR</button>
+                </form>
+                <br><br>
+
+                <!-- Excluir Nação -->
+                <h3>Excluir Nação</h3>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="form-group inline-inputs">
+                        <div>
+                            <label for="id_nacao">Nome da Nação:</label>
+                            <input type="text" id="id_nacao" name="nacao" required>
+                        </div>
+                        <div>
+                            <label for="id_federacao">Nome da Federação:</label>
+                            <input type="text" id="id_federacao" name="federacao" required>
+                        </div>  
+                    </div>
+                    <button type="submit">EXCLUIR</button>
+                </form>
+                <br><br>
+
+                <!-- Criar Nova Federação -->
+                <h3>Criar Federação</h3>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="form-group inline-inputs">
+                        <div>
+                            <label for="id_nacao">Nome da Nação:</label>
+                            <input type="text" id="id_nacao" name="nacao" required>
+                        </div>
+                        <div>
+                            <label for="id_federacao">Nome da Nova Federação:</label>
+                            <input type="text" id="id_federacao" name="federacao" required>
+                        </div>
+                    </div>
+                    <button type="submit">CRIAR</button>
+                </form>
+                <br><br>
+
+                <!-- Inserir Dominância -->
+                <h3>Inserir Dominância</h3>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="form-group inline-inputs">
+                        <div>
+                            <label for="id_dom_planeta">Planeta:</label>
+                            <input type="text" id="id_dom_planeta" name="dom_planeta" required>
+                        </div>
+                        <div>
+                            <label for="id_dom_nacao">Nação:</label>
+                            <input type="text" id="id_dom_nacao" name="dom_nacao" required>
+                        </div>
+                    </div>
+                    <div class="form-group inline-inputs">
+                        <div>
+                            <label for="id_dom_data_ini">Data inicial:</label>
+                            <input type="text" id="id_dom_data_ini" name="dom_data_ini" required>
+                        </div>
+                        <div>
+                            <label for="id_dom_data_fim">Data final:</label>
+                            <input type="text" id="id_dom_data_fim" name="dom_data_fim" required>
+                        </div>
+                    </div>
+                    <button type="submit">INSERIR</button>
+                </form>
+                <br><br>
+            </fieldset>
+        </div>
+
+        <div class="column">
+            <!-- Gerar relatórios -->
+            <fieldset>
+                <legend>Relatórios</legend>
+                <form method="post">
+                    {% csrf_token %}
+                    <button type="submit">GERAR RELATORIO</button>
+                </form>
+                <br><br>
+            </fieldset>
+            <br>
+           
+        </div>
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="report-button">SAIR</button>
+        </form>
+    </div>
+</body>
+
+</html>

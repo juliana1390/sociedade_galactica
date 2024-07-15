@@ -20,15 +20,10 @@ def login(request):
 def login_check(request):
     cpi = request.POST.get('cpi')
     password = request.POST.get('password')
-    print(cpi)
-    # print(password)
 
-    # print('antes do try')
     try:
-        print('entrou no try')
         # Buscar usuário pelo cpi (id_lider)
         user = Users.objects.get(id_lider=cpi)
-        print(user)
 
         if user.password == password:
             lider = user.id_lider
@@ -66,6 +61,5 @@ def login_check(request):
             return render(request, 'app/error_page.html', {'mensagem': mensagem})
     
     except Users.DoesNotExist:
-        print('falhou')
         mensagem = "Erro ao fazer login: Usuário não encontrado."
         return render(request, 'app/error_page.html', {'mensagem': mensagem})

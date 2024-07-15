@@ -1,11 +1,62 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oficial</title>
+    <title>Sistema de Gerenciamento - Oficial</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'app/oficial.css' %}">
 </head>
+<h1>Sistema de Gerenciamento</h1>
+
 <body>
-    <h1>Oficial</h1>
+
+    <fieldset>
+        <legend>Oficial</legend>
+        <br>
+        <div class="button-container">
+
+            <div class="form-group">
+                <label for="id_dom_data_ini">Data inicial:</label>
+                <input type="text" id="id_dom_data_ini" name="dom_data_ini" required>
+            </div>
+
+            <div class="form-group">
+                <label for="id_dom_data_fim">Data final:</label>
+                <input type="text" id="id_dom_data_fim" name="dom_data_fim" required>
+            </div>
+
+            <br><br>
+            <form method="post">
+                {% csrf_token %}
+                <button type="submit" class="report-button">ORDENAR POR SISTEMA</button>
+            </form>
+            <br>
+            <form method="post">
+                {% csrf_token %}
+                <button type="submit" class="report-button">ORDENAR POR FACÇÃO</button>
+            </form>
+            <br>
+            <form method="post">
+                {% csrf_token %}
+                <button type="submit" class="report-button">ORDENAR POR ESPÉCIE</button>
+            </form>
+            <br>
+            <form method="post">
+                {% csrf_token %}
+                <button type="submit" class="report-button">ORDENAR POR PLANETA</button>
+            </form>
+
+        </div>
+        <br>
+    </fieldset>
+
+    <br>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="exit-button">SAIR</button>
+    </form>
 </body>
+
 </html>

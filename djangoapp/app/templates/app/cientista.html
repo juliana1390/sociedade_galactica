@@ -1,11 +1,170 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cientista</title>
+    <title>Sistema de Gerenciamento - Cientista</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'app/cientista.css' %}">
 </head>
 <body>
-    <h1>Cientista</h1>
+    <h1>Sistema de Gerenciamento</h1>
+    <div class="container">
+        <div class="column">
+            <fieldset>
+                <legend>Funcionalidades - Cientista</legend>
+
+                <!-- Inserir Estrela -->
+                <h3>Criar Estrela</h3>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <div class="inline-inputs">
+                            <div>
+                                <label for="id_estrela">ID da Estrela:</label>
+                                <input type="text" id="id_estrela" name="id_estrela" required>
+                            </div>
+                            <div>
+                                <label for="nome">Nome:</label>
+                                <input type="text" id="nome" name="nome" required>
+                            </div>
+                        </div>
+                        <div class="inline-inputs">
+                            <div>
+                                <label for="classificacao">Classificação:</label>
+                                <input type="text" id="classificacao" name="classificacao" required>
+                            </div>
+                            <div>
+                                <label for="massa">Massa:</label>
+                                <input type="text" id="massa" name="massa" required>
+                            </div>
+                        </div>
+                        <div class="inline-inputs">
+                            <div>
+                                <label for="x">Coordenada x:</label>
+                                <input type="text" id="x" name="x" required>
+                            </div>
+                            <div>
+                                <label for="y">Coordenada y:</label>
+                                <input type="text" id="y" name="y" required>
+                            </div>
+                            <div>
+                                <label for="z">Coordenada z:</label>
+                                <input type="text" id="z" name="z" required>
+                            </div>
+                        </div>
+                        <button type="submit">CRIAR</button>
+                    </div>
+                </form>
+                <br>
+
+                <!-- Ler Estrela -->
+                <h3>Ler Dados da Estrela</h3>
+                <form method="post">
+                    {% csrf_token %}
+                    <!-- <label for="id_estrela">Nome da Estrela:</label> -->
+                    <div class="form-group inline-inputs">
+                        <label for="id_estrela">Nome da Estrela:</label>
+                        <input type="text" id="id_estrela" name="estrela" class="read_placeholder" required>
+                        <button type="submit">LER</button>
+                    </div>
+                    
+                </form>
+                <br>
+
+                <!-- Atualizar Estrela -->
+                <h3>Atualizar Estrela</h3>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <div class="inline-inputs">
+                            <div>
+                                <label for="id_estrela">ID da Estrela:</label>
+                                <input type="text" id="id_estrela" name="id_estrela" required>
+                            </div>
+                            <div>
+                                <label for="nome">Nome:</label>
+                                <input type="text" id="nome" name="nome" required>
+                            </div>
+                        </div>
+                        <div class="inline-inputs">
+                            <div>
+                                <label for="classificacao">Classificação:</label>
+                                <input type="text" id="classificacao" name="classificacao" required>
+                            </div>
+                            <div>
+                                <label for="massa">Massa:</label>
+                                <input type="text" id="massa" name="massa" required>
+                            </div>
+                        </div>
+                        <div class="inline-inputs">
+                            <div>
+                                <label for="x">Coordenada x:</label>
+                                <input type="text" id="x" name="x" required>
+                            </div>
+                            <div>
+                                <label for="y">Coordenada y:</label>
+                                <input type="text" id="y" name="y" required>
+                            </div>
+                            <div>
+                                <label for="z">Coordenada z:</label>
+                                <input type="text" id="z" name="z" required>
+                            </div>
+                        </div>
+                        <button type="submit">ATUALIZAR</button>
+                    </div>
+                </form>
+                <br>
+
+                <!-- Excluir Estrela -->
+                <h3>Excluir Estrela</h3>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="form-group inline-inputs">
+                        <label for="id_estrela">Nome da Estrela:</label>
+                        <input type="text" id="id_estrela" name="estrela" class="delete_placeholder" required>
+                        <button type="submit">EXCLUIR</button>
+                    </div>
+                </form>
+                <br>
+            </fieldset>
+        </div>
+
+        <div class="column">
+            <fieldset>
+                <legend>Relatórios</legend>
+
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <button type="submit">ESTRELA</button>
+                    </div>
+                </form>
+                <br>
+
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <button type="submit">PLANETA</button>
+                    </div>
+                </form>
+                <br>
+
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <button type="submit">SISTEMA</button>
+                    </div>
+                </form>
+                <br>
+
+                <form method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="report-button">SAIR</button>
+                </form>
+            </fieldset>
+        </div>
+    </div>
 </body>
 </html>

@@ -28,6 +28,12 @@ button {
     border-color: yellow;
     color: yellow;
     background-color: #222222;
-    opacity: 60%;
+    opacity: 50%;
+}
+
+button:hover {
+    color: #222222;
+    background-color: yellow;
+
 }
 

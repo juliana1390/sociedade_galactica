@@ -11,7 +11,6 @@ body {
     margin: 0;
     font-size: xx-large;
     text-align: center;
-
 }
 
 .page {
@@ -29,7 +28,6 @@ body {
 h1 {
     font-size: 1.5em;
     color: yellow;
-    /* opacity: 50%; */
 }
 
 hr {
@@ -54,7 +52,8 @@ div {
 
 label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
+    color: yellow;
 }
 
 .input-large {
@@ -81,8 +80,12 @@ label {
     padding: 10px 20px;
     cursor: pointer;
     background-color: #222222;
-    opacity: 60%;
     color: yellow;
     border-radius: 10px;
     border-color: yellow;
+}
+
+button:hover {
+    color:#222222;
+    background-color: yellow;
 }

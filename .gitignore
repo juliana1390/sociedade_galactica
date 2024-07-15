@@ -1,5 +1,5 @@
-/djangoapp/static/
-/djangoapp/media/
+/djangoapp/app/static/
+/djangoapp/app/templates/
 gunicorn-error-log
 __localcode
 /database/
