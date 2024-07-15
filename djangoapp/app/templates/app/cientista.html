@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de Gerenciamento - Cientista</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'app/cientista.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'app/css/cientista.css' %}">
 </head>
 <body>
     <h1>Sistema de Gerenciamento</h1>
@@ -157,13 +157,12 @@
                         <button type="submit">SISTEMA</button>
                     </div>
                 </form>
-                <br>
-
-                <form method="post">
-                    {% csrf_token %}
-                    <button type="submit" class="report-button">SAIR</button>
-                </form>
             </fieldset>
+            <br>
+            <form method="post">
+                {% csrf_token %}
+                <button type="submit" class="report-button">SAIR</button>
+            </form>
         </div>
     </div>
 </body>

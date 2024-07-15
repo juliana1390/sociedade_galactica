@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de Gerenciamento - Comandante</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'app/comandante.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'app/css/comandante.css' %}">
 </head>
 
 <body>
@@ -111,12 +111,12 @@
                 <br><br>
             </fieldset>
             <br>
-           
+            <form method="post">
+                {% csrf_token %}
+                <button type="submit" class="report-button">SAIR</button>
+            </form>
         </div>
-        <form method="post">
-            {% csrf_token %}
-            <button type="submit" class="report-button">SAIR</button>
-        </form>
+        
     </div>
 </body>
 
