@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Sucesso</title>
+</head>
+    <h1>Sistema de Gerenciamento</h1>
+<body>
+    <hr>
+    <br>
+    <p style="font-size: large;">{{ mensagem }}</p>
+
+    <br>
+    <a href="javascript:history.go(-1)" style="font-size: large;">Voltar</a>
+    <br><br>
+    <form method="post" action="{% url 'logout' %}">
+        {% csrf_token %}
+        <button type="submit" class="report-button">SAIR</button>
+    </form>
+</body>
+</html>

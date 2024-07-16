@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Relatório de Estrelas</title>
+</head>
+<body>
+    <form method="post" action="{% url 'logout' %}">
+        {% csrf_token %}
+        <button type="submit" class="report-button">SAIR</button>
+    </form>
+    <a href="javascript:history.go(-1)" style="font-size: large;">Voltar</a>
+    <h1>Relatório de Estrelas</h1>
+    
+    {% if result %}
+        <table border="1">
+            <tr>
+                <th width="14%">ID Estrela</th>
+                <th width="14%">Nome</th>
+                <th width="14%">Classificação</th>
+                <th width="14%">Massa</th>
+                <th width="14%">X</th>
+                <th width="14%">Y</th>
+                <th width="14%">Z</th>
+            </tr>
+            {% for row in result %}
+                <tr>
+                    <td>{{ row.0 }}</td>
+                    <td>{{ row.1 }}</td>
+                    <td>{{ row.2 }}</td>
+                    <td>{{ row.3 }}</td>
+                    <td>{{ row.4 }}</td>
+                    <td>{{ row.5 }}</td>
+                    <td>{{ row.6 }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <p>Nenhum dado encontrado.</p>
+    {% endif %}
+</body>
+</html>

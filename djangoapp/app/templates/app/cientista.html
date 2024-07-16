@@ -17,7 +17,7 @@
 
                 <!-- Inserir Estrela -->
                 <h3>Criar Estrela</h3>
-                <form method="post">
+                <form method="post" action="{% url 'app:view_create_star' %}">
                     {% csrf_token %}
                     <div class="form-group">
                         <div class="inline-inputs">
@@ -61,7 +61,7 @@
 
                 <!-- Ler Estrela -->
                 <h3>Ler Dados da Estrela</h3>
-                <form method="post">
+                <form method="post" action="{% url 'app:view_read_star_data' %}">
                     {% csrf_token %}
                     <!-- <label for="id_estrela">Nome da Estrela:</label> -->
                     <div class="form-group inline-inputs">
@@ -75,7 +75,7 @@
 
                 <!-- Atualizar Estrela -->
                 <h3>Atualizar Estrela</h3>
-                <form method="post">
+                <form method="post" action="{% url 'app:view_update_star' %}">
                     {% csrf_token %}
                     <div class="form-group">
                         <div class="inline-inputs">
@@ -119,7 +119,7 @@
 
                 <!-- Excluir Estrela -->
                 <h3>Excluir Estrela</h3>
-                <form method="post">
+                <form method="post" action="{% url 'app:view_delete_star' %}">
                     {% csrf_token %}
                     <div class="form-group inline-inputs">
                         <label for="id_estrela">Nome da Estrela:</label>
