@@ -16,12 +16,11 @@ def create_star(id_estrela, nome, classificacao, massa, x, y, z):
 def read_star_data(id_estrela):
     try:
         with connection.cursor() as cursor:
-            out_cursor = connection.connection.cursor()
-            cursor.callproc('read_star_data', [id_estrela, out_cursor])
-
-            # Fetch all rows from cursor
-            result = out_cursor.fetchall()
-            out_cursor.close()
+            # stored function call
+            cursor.callproc('read_star_data', [id_estrela])
+            
+            # fetch all rows from cursor
+            result = cursor.fetchall()
             
             return result
             

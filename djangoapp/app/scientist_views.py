@@ -15,7 +15,6 @@ def view_create_star(request):
     x = request.POST.get('x')
     y = request.POST.get('y')
     z = request.POST.get('z')
-    user = request.session.get('user_id')
      
     print('entrou na funcao')
     if massa is None or massa.strip() == '':
@@ -28,7 +27,6 @@ def view_create_star(request):
         return render(request, 'app/error_page.html', {'mensagem': "Coordenada z não pode estar vazia."})
 
     try:
-        print('convertendo dados no try')
         massa = float(massa)
         x = float(x)
         y = float(y)
@@ -39,12 +37,10 @@ def view_create_star(request):
         return render(request, 'app/success_page.html', {'mensagem': mensagem})
     
     except ValueError as ve:
-        print('exception valor')
         mensagem_e = f"Erro na criação da estrela '{id_estrela}': {str(ve)}"
         return render(request, 'app/error_page.html', {'mensagem': mensagem_e})
     
     except Exception as e:
-        print('exception')
         mensagem_e = f"Erro na criação da estrela '{id_estrela}': {str(e)}"
         return render(request, 'app/error_page.html', {'mensagem': mensagem_e})
 
@@ -52,7 +48,6 @@ def view_create_star(request):
 @require_POST
 def view_read_star_data(request):
     id_estrela = request.POST.get('estrela')
-    user = request.session.get('user_id')
 
     try:
         result = read_star_data(id_estrela)
@@ -61,6 +56,7 @@ def view_read_star_data(request):
     except Exception as e:
         mensagem_e = f"Erro: {str(e)}"
         return render(request, 'app/error_page.html', {'mensagem': mensagem_e})
+
 
 # update star ----------------------------------------------------------
 def view_update_star(request):
@@ -71,7 +67,6 @@ def view_update_star(request):
     x = request.POST.get('x')
     y = request.POST.get('y')
     z = request.POST.get('z')
-    user = request.session.get('user_id')
    
     if massa is None or massa.strip() == '':
         return render(request, 'app/error_page.html', {'mensagem': "Massa não pode estar vazia."})
@@ -107,7 +102,6 @@ def view_update_star(request):
 @require_POST
 def view_delete_star(request):
     id_estrela = request.POST.get('estrela')
-    user = request.session.get('user_id')
 
     try:
         delete_star(id_estrela)
