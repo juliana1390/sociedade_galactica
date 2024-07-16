@@ -1,14 +1,12 @@
 from django.shortcuts import render
 from django.views.decorators.http import require_POST
 from app.models import *
-from app.models import Users, Lider, Nacao, Especie
 
 def index(request):
     return render(
         request,
         'app/index.html'
     )
-
 
 def login(request):
     return render(
@@ -63,3 +61,12 @@ def login_check(request):
     except Users.DoesNotExist:
         mensagem = "Erro ao fazer login: Usuário não encontrado."
         return render(request, 'app/error_page.html', {'mensagem': mensagem})
+
+# LOGOUT
+@require_POST
+def logout(request):
+    try:
+        return render(request, 'app/index.html')
+    except Exception as e:
+        # 
+        raise e

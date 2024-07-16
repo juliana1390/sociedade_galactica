@@ -53,10 +53,9 @@
     </fieldset>
 
     <br>
-    <form method="post">
+    <form method="post" action="{% url 'app:logout' %}">
         {% csrf_token %}
         <button type="submit" class="exit-button">SAIR</button>
     </form>
 </body>
-
 </html>
