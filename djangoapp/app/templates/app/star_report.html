@@ -1,11 +1,13 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <title>Relatório de Estrelas</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'app/css/star_report.css' %}">
 </head>
 <body>
-    <form method="post" action="{% url 'logout' %}">
+    <form method="post" action="{% url 'app:logout' %}">
         {% csrf_token %}
         <button type="submit" class="report-button">SAIR</button>
     </form>
@@ -13,28 +15,32 @@
     <h1>Relatório de Estrelas</h1>
     
     {% if result %}
-        <table border="1">
+    <table width="100%">
+        <thead>
             <tr>
                 <th width="14%">ID Estrela</th>
                 <th width="14%">Nome</th>
                 <th width="14%">Classificação</th>
                 <th width="14%">Massa</th>
-                <th width="14%">X</th>
-                <th width="14%">Y</th>
-                <th width="14%">Z</th>
+                <th width="14%">Coordenada X</th>
+                <th width="14%">Coordenada Y</th>
+                <th width="14%">Coordenada Z</th>        
             </tr>
+        </thead>
+        <tbody>
             {% for row in result %}
-                <tr>
-                    <td>{{ row.0 }}</td>
-                    <td>{{ row.1 }}</td>
-                    <td>{{ row.2 }}</td>
-                    <td>{{ row.3 }}</td>
-                    <td>{{ row.4 }}</td>
-                    <td>{{ row.5 }}</td>
-                    <td>{{ row.6 }}</td>
-                </tr>
+            <tr>
+                <td>{{ row.0 }}</td>
+                <td>{{ row.1 }}</td>
+                <td>{{ row.2 }}</td>
+                <td>{{ row.3 }}</td>
+                <td>{{ row.4 }}</td>
+                <td>{{ row.5 }}</td>
+                <td>{{ row.6 }}</td>
+            </tr>
             {% endfor %}
-        </table>
+        </tbody>
+    </table>
     {% else %}
         <p>Nenhum dado encontrado.</p>
     {% endif %}

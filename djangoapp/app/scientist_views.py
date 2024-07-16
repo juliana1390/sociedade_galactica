@@ -57,7 +57,6 @@ def view_read_star_data(request):
         mensagem_e = f"Erro: {str(e)}"
         return render(request, 'app/error_page.html', {'mensagem': mensagem_e})
 
-
 # update star ----------------------------------------------------------
 def view_update_star(request):
     id_estrela = request.POST.get('id_estrela')

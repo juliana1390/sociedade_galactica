@@ -22,8 +22,8 @@ urlpatterns = [
 
     # read star data
     path('read_star_data/', view_read_star_data, name='view_read_star_data'),
+    path('star_report/', view_read_star_data, name='star_report'),
     path('pagina_erro/', view_read_star_data, name='pagina_erro'),
-    path('pagina_sucesso/', view_read_star_data, name='pagina_sucesso'),
 
     # update star
     path('update_star/', view_update_star, name='view_update_star'),
