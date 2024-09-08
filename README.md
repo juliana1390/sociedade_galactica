@@ -42,3 +42,33 @@ Entre as diversas nações existentes, podem existir **Líderes**, membros influ
 --------------------------------------
 
 <img src="djangoapp/app/templates/app/relacional.png">
+
+---
+
+## Prerequisites
+
+Before starting, make sure you have the following installed on your machine:
+
+- [Docker](https://www.docker.com/)
+- [Docker Compose](https://docs.docker.com/compose/)
+
+## Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone [sociedade_galactica](https://github.com/juliana1390/sociedade_galactica.git)
+   cd sociedade_galactica
+   ```
+
+2. Build and start the Docker containers:
+
+  ```bash
+  docker compose up --build
+  ```
+3. Accessing the Application:
+  The application will be available at:
+   ```bash
+   http://0.0.0.0:8000/
+   ```
+
