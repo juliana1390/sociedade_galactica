@@ -57,15 +57,15 @@ Before starting, make sure you have the following installed on your machine:
 1. Clone the repository:
 
    ```bash
-   git clone [sociedade_galactica](https://github.com/juliana1390/sociedade_galactica.git)
+   git clone https://github.com/juliana1390/sociedade_galactica.git
    cd sociedade_galactica
    ```
 
 2. Build and start the Docker containers:
 
-  ```bash
-  docker compose up --build
-  ```
+    ```bash
+    docker compose up --build
+    ```
 3. Accessing the Application:
   The application will be available at:
    ```bash
